@@ -1,0 +1,49 @@
+<html>
+<title>Snowball</title>
+<!--An animation that simulates a snowball rolling -->
+<head>
+<style>
+body {	background: black; }
+
+#circle {	left: 0px;
+			top: 0px;
+			position: relative;
+			visibility: visible;}
+
+#button1 {	width: 125px;
+			height: 70px;
+			position: absolute;
+			left: 950px;
+			font-size: 40px; }
+
+			
+@keyframes drop {
+  0%   {left:0px;   top:0px; height: 0px; width: 0px; opacity: 0.3; transform: rotate(0deg)}
+  10%  {left:175px; top:100px; height: 20px; width: 20px; opacity: 0.3; transform: rotate(36deg)}
+  20%  {left:275px; top:200px;height: 40px; width: 40px; opacity: 0.5; transform: rotate(72deg)}
+  30%  {left:375px; top:300px; height: 60px; width: 60px; opacity: 0.5; transform: rotate(108deg)}
+  40%  {left:475px; top:400px; height: 80px; width: 80px; opacity: 0.7; transform: rotate(144deg)}
+  50%  {left:575px; top:500px; height: 100px; width: 100px; opacity: 0.7; transform: rotate(180deg)}
+  60%  {left:675px; top:600px; height: 120px; width: 120px; opacity: 0.9; transform: rotate(216deg)}
+  70%  {left:775px; top:600px; height: 140px; width: 140px; opacity: 0.9; transform: rotate(252deg)}
+  80%  {left:875px; top:600px; height: 160px; width: 160px; opacity: 1.0; transform: rotate(288deg)}
+  90%  {left:975px; top:600px; height: 180px; width: 180px; opacity: 1.0; transform: rotate(324deg)}
+  100% {left:1075px; top:600px; height: 200px; width: 200px; opacity: 1.0; transform: rotate(360deg)}
+}
+</style>
+<script>
+	function spin(){
+	document.getElementById("circle").style = "animation: drop 12s linear 1s 2 alternate;"
+	}
+
+</script>
+
+</head>
+<body>
+
+<img id="circle" src="snowball.png" width="100" height="100">
+
+<input type="button" id="button1" value="Start" onclick="spin()" />
+
+</body>
+</html>
